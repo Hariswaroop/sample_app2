@@ -8,11 +8,12 @@ gem 'rails', '3.2.6'
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 
 group :production do
-  gem 'pg'
+  gem 'pg','0.12.2'
 end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails','2.10.0'
 end
 
 # Use unicorn as the web server
@@ -33,6 +34,4 @@ end
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
- group :development, :test do
-   gem 'rspec','2.10.0'
- end
+
